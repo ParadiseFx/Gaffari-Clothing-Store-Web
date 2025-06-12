@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaffari - The Royalty of Gaffari</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+        <img src="images/logo1.jpg" alt="logo" style="height:70px;">
+    </a>
+    <h1>Gaffari</h1>
+    <p class="slogan">The Royalty of Gaffari</p>
+    <nav>
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('suits')">Suits</button>
+      <button onclick="filterProducts('tshirts')">T-Shirts</button>
+      <button onclick="filterProducts('hoodies')">Hoodies</button>
+      <button onclick="filterProducts('trackpants')">Trackpants</button>
+      <button id="open-cart">🛒 Cart</button>
+    </nav>
+  </header>
+
+  <main id="product-list">
+    <!-- Example product card -->
+    <div class="product-card suits">
+      <img src="images/suit1.jpg" alt="Classic Suit" />
+      <h3>Classic Grey 2-Piece Suit</h3>
+      <p>R2300</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Classic Suit', 2300, this)">Add to Cart</button>
+    </div>
+    <div class="product-card tshirts">
+      <img src="images/tshirt1.jpg" alt="Gaffari T-Shirt1" />
+      <h3>Gaffari Black T-Shirt</h3>
+      <p>R950</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari T-Shirt1', 950, this)">Add to Cart</button>
+    </div>
+    <div class="product-card tshirts">
+      <img src="images/tshirt2.jpg" alt="Gaffari T-Shirt2" />
+      <h3>Gaffari-R Green on Black T-Shirt</h3>
+      <p>R1050</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari T-Shirt2', 1050, this)">Add to Cart</button>
+    </div>
+    <div class="product-card tshirts">
+      <img src="images/tshirt3.jpg" alt="Gaffari T-Shirt3" />
+      <h3>Gaffari Classic Black T-Shirt</h3>
+      <p>R1800</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari T-Shirt3', 1800, this)">Add to Cart</button>
+    </div>
+    <div class="product-card tshirts">
+      <img src="images/tshirt4.jpg" alt="Gaffari T-Shirt4" />
+      <h3> Royalty-Gaffari White T-Shirt</h3>
+      <p>R1500</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari T-Shirt4', 1500, this)">Add to Cart</button>
+    </div>
+    <div class="product-card tshirts">
+      <img src="images/tshirt5.jpg" alt="Gaffari T-Shirt5" />
+      <h3>GF-Gaffari Black T-Shirt</h3>
+      <p>R1300</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari T-Shirt5', 1300, this)">Add to Cart</button>
+    </div>
+    <div class="product-card hoodies">
+      <img src="images/hoodie1.jpg" alt="Gaffari Hoodie1" />
+      <h3>Comfort Black Oversize Hoodie</h3>
+      <p>R1800</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari Hoodie1', 1800, this)">Add to Cart</button>
+    </div>
+    <div class="product-card hoodies">
+      <img src="images/hoodie2.jpg" alt="Gaffari Hoodie2" />
+      <h3>Gaffari Colourful Oversize Hoodie</h3>
+      <p>R1800</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari Hoodie2', 1800, this)">Add to Cart</button>
+    </div>
+    <div class="product-card hoodies">
+      <img src="images/hoodie3.jpg" alt="Gaffari Hoodie3" />
+      <h3>Gaffari V2 Black Oversize Hoodie</h3>
+      <p>R1800</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari Hoodie3', 1800, this)">Add to Cart</button>
+    </div>
+    <div class="product-card trackpants">
+      <img src="images/trackpants1.jpg" alt="Gaffari Trackpants" />
+      <h3>Casual Trackpants</h3>
+      <p>R1200</p>
+      <select class="size-selector">
+        <option value="">Select Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('Gaffari Trackpants', 1200, this)">Add to Cart</button>
+    </div>
+    <!-- Add other product cards here -->
+  </main>
+
+  <aside id="cart-sidebar">
+    <button id="close-cart">Close</button>
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p id="cart-total">Total: R0</p>
+    <a id="whatsapp-checkout" href="#" target="_blank" style="display: none;">
+      <button style="background-color: #25D366; color: white; border: none; padding: 0.8rem 1rem; margin-top: 1rem; border-radius: 10px; width: 100%;">
+        Checkout via WhatsApp
+      </button>
+    </a>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
